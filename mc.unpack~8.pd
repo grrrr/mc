@@ -18,7 +18,7 @@
 #X obj 479 213 receive~ \$0-dummy;
 #X obj 495 241 receive~ \$0-dummy;
 #X obj 42 32 inlet~;
-#X obj 42 65 m~._in;
+#X obj 42 65 mc._in;
 #X obj 41 104 mc._unpack \$0-dummy 8;
 #X connect 9 0 10 0;
 #X connect 9 1 11 0;

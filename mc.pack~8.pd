@@ -16,7 +16,7 @@
 #X obj 425 87 send~ \$0-mc-7;
 #X obj 25 166 outlet~;
 #X obj 27 52 send~ \$0-mc-0;
-#X obj 25 137 m~._out \$0 8;
+#X obj 25 137 mc._out \$0 8;
 #X connect 0 0 16 0;
 #X connect 1 0 8 0;
 #X connect 2 0 9 0;

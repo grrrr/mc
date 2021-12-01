@@ -1,6 +1,6 @@
 #N canvas 315 204 409 251 12;
-#X obj 53 64 m~._in;
-#X obj 55 157 m~._out;
+#X obj 53 64 mc._in;
+#X obj 55 157 mc._out;
 #X obj 55 182 outlet~;
 #X obj 53 121 mc._slice;
 #X obj 53 35 inlet~ fwd;

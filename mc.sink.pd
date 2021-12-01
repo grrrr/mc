@@ -1,6 +1,6 @@
 #N canvas 69 23 292 257 12;
 #X obj 168 40 inlet;
-#X obj 44 68 m~._in;
+#X obj 44 68 mc._in;
 #X obj 44 38 inlet~ fwd;
 #X obj 43 125 mc._sink;
 #X obj 43 194 outlet;
