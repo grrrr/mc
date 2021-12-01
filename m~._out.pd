@@ -1,0 +1,12 @@
+#N canvas 0 23 318 281 12;
+#X obj 37 215 outlet~;
+#X obj 38 26 inlet;
+#X obj 95 26 loadbang;
+#X obj 95 57 pack \$1 \$2;
+#X obj 37 102 array set \$0-out;
+#X obj 37 137 array define \$0-out 2;
+#X obj 37 181 tabreceive~ \$0-out;
+#X connect 1 0 4 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 6 0 0 0;

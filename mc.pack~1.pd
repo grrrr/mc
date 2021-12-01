@@ -1,0 +1,7 @@
+#N canvas 41 53 305 188 12;
+#X obj 39 142 outlet;
+#X obj 41 28 inlet~;
+#X obj 40 61 send~ \$0-mc-0;
+#X obj 39 113 mc._out \$0 1;
+#X connect 1 0 2 0;
+#X connect 3 0 0 0;

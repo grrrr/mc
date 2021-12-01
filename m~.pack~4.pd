@@ -1,0 +1,16 @@
+#N canvas 397 93 338 217 12;
+#X obj 26 23 inlet~;
+#X obj 83 23 inlet~;
+#X obj 140 23 inlet~;
+#X obj 196 24 inlet~;
+#X obj 82 84 send~ \$0-mc-1;
+#X obj 139 56 send~ \$0-mc-2;
+#X obj 194 86 send~ \$0-mc-3;
+#X obj 27 170 outlet~;
+#X obj 27 55 send~ \$0-mc-0;
+#X obj 26 138 m~._out \$0 4;
+#X connect 0 0 8 0;
+#X connect 1 0 4 0;
+#X connect 2 0 5 0;
+#X connect 3 0 6 0;
+#X connect 9 0 7 0;

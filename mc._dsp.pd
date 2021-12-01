@@ -1,0 +1,16 @@
+#N canvas 105 363 404 277 12;
+#X obj 279 45 r pd;
+#X obj 279 70 route dsp;
+#X obj 76 228 outlet;
+#X obj 75 47 inlet;
+#X obj 76 84 t b;
+#X obj 139 45 r pd-dsp-started;
+#X msg 140 74 1;
+#X obj 76 193 f -1;
+#X connect 0 0 1 0;
+#X connect 1 0 7 0;
+#X connect 3 0 4 0;
+#X connect 4 0 7 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 2 0;

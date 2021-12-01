@@ -1,0 +1,10 @@
+#N canvas 86 338 304 195 12;
+#X obj 42 129 mc.snap~;
+#X obj 164 129 mc.snap~;
+#X obj 102 128 mc.snap~;
+#X obj 42 103 m~.unpack~8, f 19;
+#X obj 42 49 m~.source 8 noise~;
+#X connect 3 0 0 0;
+#X connect 3 3 2 0;
+#X connect 3 7 1 0;
+#X connect 4 0 3 0;

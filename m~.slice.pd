@@ -1,0 +1,15 @@
+#N canvas 315 204 409 251 12;
+#X obj 53 64 m~._in;
+#X obj 55 157 m~._out;
+#X obj 55 182 outlet~;
+#X obj 53 121 mc._slice;
+#X obj 53 35 inlet~ fwd;
+#X obj 121 65 route set;
+#X obj 212 35 inlet;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 3 0 1 0;
+#X connect 4 0 0 0;
+#X connect 4 1 5 0;
+#X connect 5 0 3 1;
+#X connect 6 0 3 1;

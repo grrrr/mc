@@ -1,0 +1,12 @@
+#N canvas 345 296 273 180 12;
+#X obj 41 130 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 41 62 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 70 130 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 28 14 Detect/report DSP activity;
+#X obj 41 91 mc._dsp;
+#X connect 1 0 4 0;
+#X connect 4 0 0 0;
+#X connect 4 0 2 0;
