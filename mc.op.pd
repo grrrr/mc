@@ -7,7 +7,7 @@
 #X obj 341 80 list split 1;
 #X obj 340 140 list append;
 #X obj 381 109 list prepend op;
-#X obj 134 114 list prepend set _binop;
+#X obj 134 114 list prepend set mc._op;
 #X obj 133 139 list trim;
 #X obj 40 38 inlet~ fwd;
 #X obj 54 72 route set;

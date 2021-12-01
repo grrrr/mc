@@ -23,7 +23,7 @@
 #X obj 78 125 mc.dist 64;
 #X obj 78 182 mc.effect 21 vstplugin~ 64 21;
 #X obj 78 211 mc.sink 1 env~;
-#X obj 78 154 mc.binop *~ 0;
+#X obj 78 154 mc.op *~ 0;
 #X connect 1 0 7 0;
 #X connect 1 1 7 1;
 #X connect 2 0 19 1;
