@@ -5,10 +5,7 @@
 #X obj 161 231 mc.snap~;
 #X obj 99 230 mc.snap~;
 #X obj 98 29 mc.sig~;
-#X obj 39 205 m~.unpack~8, f 19;
-#X obj 40 50 m~.pack~8, f 18;
 #X msg 84 126 all \$1;
-#X obj 39 160 m~.binop *~;
 #X msg 158 127 0 \$1;
 #X msg 225 127 7 \$1;
 #X obj 84 105 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
@@ -17,17 +14,20 @@
 -262130 -1 -1 0 256;
 #X obj 225 105 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262130 -1 -1 0 256;
-#X connect 1 0 7 0;
-#X connect 2 0 7 7;
-#X connect 5 0 7 3;
-#X connect 6 0 0 0;
-#X connect 6 3 4 0;
-#X connect 6 7 3 0;
-#X connect 7 0 9 0;
-#X connect 8 0 9 1;
+#X obj 40 50 mc.pack~8, f 18;
+#X obj 39 160 mc.binop *~;
+#X obj 39 205 mc.unpack~8, f 19;
+#X connect 1 0 12 0;
+#X connect 2 0 12 7;
+#X connect 5 0 12 3;
+#X connect 6 0 13 1;
+#X connect 7 0 13 1;
+#X connect 8 0 13 1;
 #X connect 9 0 6 0;
-#X connect 10 0 9 1;
-#X connect 11 0 9 1;
-#X connect 12 0 8 0;
-#X connect 13 0 10 0;
-#X connect 14 0 11 0;
+#X connect 10 0 7 0;
+#X connect 11 0 8 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 0 0;
+#X connect 14 3 4 0;
+#X connect 14 7 3 0;
