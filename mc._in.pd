@@ -1,8 +1,0 @@
-#N canvas 0 23 450 300 12;
-#X obj 66 38 inlet;
-#X obj 66 181 outlet;
-#X obj 66 91 route mc;
-#X obj 66 118 mc._chk;
-#X connect 0 0 2 0;
-#X connect 2 0 3 0;
-#X connect 3 0 1 0;
