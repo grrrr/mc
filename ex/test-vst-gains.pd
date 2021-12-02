@@ -20,7 +20,7 @@
 #X obj 204 334 array define gains 21;
 #X msg 192 95 all 0 \, \$1 1;
 #X obj 78 45 osc~ 10000;
-#X obj 78 125 mc.dist 64;
+#X obj 78 125 mc.dist~ 64;
 #X obj 78 182 mc.effect 21 vstplugin~ 64 21;
 #X obj 78 211 mc.sink 1 env~;
 #X obj 78 154 mc.op *~ 0;
