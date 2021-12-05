@@ -101,7 +101,7 @@
 #X connect 9 0 2 0;
 #X restore 544 313 pd accum;
 #X obj 192 441 + 2;
-#X obj 520 265 t b f b;
+#X obj 520 220 t b f b;
 #X msg 519 374 connect 0 0 1 0;
 #X obj 543 337 list prepend obj 10 30 route;
 #X obj 50 70 list;
@@ -116,7 +116,7 @@
 #X obj 323 64 t b a a;
 #X obj 186 607 outlet;
 #X msg 186 583 \$2 set \$7-mc-\$1;
-#X msg 304 542 obj 500 \$6 send~ \$3-mc-\$2 \, connect \$4 0 \$5 0
+#X msg 304 530 obj 500 \$6 send~ \$3-mc-\$2 \, connect \$4 0 \$5 0
 ;
 #X obj 85 513 t a a;
 #X obj 50 131 f;
@@ -138,12 +138,14 @@
 #X connect 5 2 6 0;
 #X connect 6 0 4 0;
 #X restore 49 232 pd changed;
-#X obj 519 242 spigot;
+#X obj 519 197 spigot;
 #X obj 318 287 spigot;
-#X obj 302 517 spigot;
+#X obj 302 505 spigot;
 #X obj 49 204 t b f b;
 #X obj 36 162 select 0;
 #X text 96 162 filter id 0;
+#X obj 607 218 t b b;
+#X msg 642 536 0;
 #X connect 0 0 43 0;
 #X connect 3 0 12 0;
 #X connect 6 0 36 0;
@@ -161,7 +163,7 @@
 #X connect 14 0 5 0;
 #X connect 15 0 48 0;
 #X connect 16 0 38 0;
-#X connect 17 0 13 0;
+#X connect 17 0 56 0;
 #X connect 21 0 28 0;
 #X connect 24 0 26 0;
 #X connect 26 0 41 5;
@@ -176,7 +178,7 @@
 #X connect 30 0 41 4;
 #X connect 31 0 32 0;
 #X connect 31 1 29 0;
-#X connect 31 2 13 0;
+#X connect 31 2 56 0;
 #X connect 32 0 9 0;
 #X connect 33 0 9 0;
 #X connect 34 0 15 0;
@@ -210,6 +212,9 @@
 #X connect 53 1 16 3;
 #X connect 53 1 41 6;
 #X connect 54 1 53 0;
+#X connect 56 0 13 0;
+#X connect 56 1 57 0;
+#X connect 57 0 14 0;
 #X restore 45 150 pd gen;
 #X obj 298 88 pdcontrol;
 #X obj 46 223 outlet;

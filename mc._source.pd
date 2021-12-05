@@ -1,4 +1,4 @@
-#N canvas 597 45 600 326 12;
+#N canvas 69 54 600 326 12;
 #X obj 44 38 inlet;
 #X obj 298 39 loadbang;
 #N canvas 102 23 903 682 gen 0;
@@ -31,11 +31,11 @@
 #X connect 8 0 7 1;
 #X connect 9 0 4 1;
 #X connect 9 0 2 0;
-#X restore 405 296 pd accum;
+#X restore 405 321 pd accum;
 #X obj 50 195 mc._gen \$0-dyn;
 #X obj 213 37 r \$0-dyn;
 #X obj 425 641 s \$0-dyn;
-#X obj 405 261 t f b;
+#X obj 405 207 t f b;
 #N canvas 649 119 585 297 connections 0;
 #X obj 63 26 inlet;
 #X text 109 24 index;
@@ -56,7 +56,7 @@
 #X restore 151 556 pd connections;
 #X msg 465 257 vis 1 \, editmode 1 \, mouse 0 30 0 0 \, mouseup 10000
 10000 0 \, cut \, editmode 0 \, vis 0;
-#X text 419 317 list 0 1 2 3 ... n-1;
+#X text 419 342 list 0 1 2 3 ... n-1;
 #X obj 52 610 list prepend \$0;
 #X obj 323 66 list split 1;
 #X text 318 98 #out;
@@ -74,6 +74,8 @@
 #X obj 203 406 list append;
 #X obj 204 432 list prepend obj;
 #X obj 406 367 t b a;
+#X obj 466 206 t b b;
+#X msg 494 563 0;
 #X connect 0 0 13 0;
 #X connect 4 0 28 0;
 #X connect 5 0 12 0;
@@ -81,13 +83,13 @@
 #X connect 5 2 8 0;
 #X connect 6 0 5 1;
 #X connect 8 0 4 0;
-#X connect 8 1 10 0;
+#X connect 8 1 29 0;
 #X connect 9 0 7 0;
 #X connect 10 0 7 0;
 #X connect 12 0 3 0;
 #X connect 13 0 20 0;
 #X connect 13 1 26 1;
-#X connect 15 0 10 0;
+#X connect 15 0 29 0;
 #X connect 16 0 17 0;
 #X connect 17 0 19 2;
 #X connect 17 0 25 1;
@@ -105,12 +107,15 @@
 #X connect 27 0 7 0;
 #X connect 28 0 23 0;
 #X connect 28 1 22 0;
+#X connect 29 0 10 0;
+#X connect 29 1 30 0;
+#X connect 30 0 12 0;
 #X restore 45 216 pd gen;
 #X obj 298 88 pdcontrol;
 #X obj 46 248 outlet;
 #X obj 214 188 cnv 15 100 60 empty empty dyn 5 12 0 14 -233017 -66577
 0;
-#N canvas 178 -698 753 480 \$0-dyn 0;
+#N canvas 178 23 753 480 \$0-dyn 0;
 #X obj 10 5 inlet;
 #X restore 220 214 pd \$0-dyn;
 #X obj 150 38 inlet;
@@ -126,6 +131,7 @@
 #X connect 1 0 9 0;
 #X connect 2 0 4 0;
 #X connect 3 0 2 0;
+#X connect 7 0 6 0;
 #X connect 9 0 3 0;
 #X connect 11 0 12 0;
 #X connect 12 1 2 0;
