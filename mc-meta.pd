@@ -2,7 +2,8 @@
 #N canvas 45 236 420 300 META 0;
 #X text 10 50 AUTHOR Thomas Grill;
 #X text 10 30 NAME mc;
-#X text 10 90 LICENSE GPL v3.0;
-#X text 10 70 DESCRIPTION Pure data multi-channel extension;
-#X text 10 110 VERSION 0.0.1;
+#X text 9 106 LICENSE GPL v3.0;
+#X text 9 126 VERSION 0.0.1;
+#X text 10 70 DESCRIPTION Pure data multi-channel extension. Requires
+Pd version >=0.51;
 #X restore 10 10 pd META;
