@@ -30,9 +30,11 @@
 #X obj 395 264 mc.snap~;
 #X obj 340 195 mc.unpack~4, f 12;
 #X msg 276 110 0 \$1;
-#X floatatom 276 88 5 0 0 0 - - -;
-#X text 244 67 TODO: 0 doesn't work;
 #X text 36 22 CHANGE THOSE;
+#X obj 276 91 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -261682 -1
+-1 0;
+#X text 337 73 4;
+#X text 278 73 0;
 #X connect 1 0 19 0;
 #X connect 2 0 24 0;
 #X connect 3 0 29 0;
@@ -61,4 +63,4 @@
 #X connect 29 2 27 0;
 #X connect 29 3 28 0;
 #X connect 30 0 2 1;
-#X connect 31 0 30 0;
+#X connect 32 0 30 0;
