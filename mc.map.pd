@@ -71,15 +71,13 @@
 #X obj 413 247 mc._listseq;
 #X msg 516 213 vis 1 \, editmode 1 \, mouse 0 30 0 0 \, mouseup 10000
 10000 0 \, cut \, editmode 0 \, vis 0;
-#X obj 45 291 t b f;
-#X msg 41 537 dirty 0;
 #X connect 0 0 1 1;
 #X connect 1 0 4 0;
 #X connect 4 0 12 0;
 #X connect 5 0 15 0;
 #X connect 7 0 1 0;
 #X connect 9 0 33 0;
-#X connect 10 0 41 0;
+#X connect 10 0 22 0;
 #X connect 10 1 13 0;
 #X connect 10 2 32 0;
 #X connect 11 0 10 1;
@@ -115,9 +113,6 @@
 #X connect 34 0 24 0;
 #X connect 39 0 27 0;
 #X connect 40 0 12 0;
-#X connect 41 0 42 0;
-#X connect 41 1 22 0;
-#X connect 42 0 12 0;
 #X restore 45 216 pd gen;
 #X obj 298 88 pdcontrol;
 #X obj 46 248 outlet;

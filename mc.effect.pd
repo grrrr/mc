@@ -128,8 +128,6 @@
 #X msg 618 526 connect 0 0 3 0 \, connect 1 0 4 0;
 #X obj 690 238 t b b;
 #X msg 717 565 0;
-#X obj 27 540 t b f;
-#X msg 30 567 dirty 0;
 #X connect 0 0 22 0;
 #X connect 1 0 32 0;
 #X connect 5 0 17 0;
@@ -185,7 +183,7 @@
 #X connect 47 0 48 0;
 #X connect 47 0 42 1;
 #X connect 48 0 45 1;
-#X connect 49 0 56 0;
+#X connect 49 0 16 0;
 #X connect 49 1 44 0;
 #X connect 49 1 45 0;
 #X connect 49 3 38 1;
@@ -194,9 +192,6 @@
 #X connect 54 0 12 0;
 #X connect 54 1 55 0;
 #X connect 55 0 16 0;
-#X connect 56 0 57 0;
-#X connect 56 1 16 0;
-#X connect 57 0 9 0;
 #X restore 45 216 pd gen;
 #X obj 298 88 pdcontrol;
 #X obj 46 248 outlet;

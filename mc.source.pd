@@ -81,11 +81,9 @@
 #X obj 406 367 t b a;
 #X obj 466 206 t b b;
 #X msg 494 563 0;
-#X obj 52 326 t b f;
-#X msg 50 554 dirty 0;
 #X connect 0 0 13 0;
 #X connect 4 0 28 0;
-#X connect 5 0 31 0;
+#X connect 5 0 12 0;
 #X connect 5 1 24 0;
 #X connect 5 2 8 0;
 #X connect 6 0 5 1;
@@ -117,9 +115,6 @@
 #X connect 29 0 10 0;
 #X connect 29 1 30 0;
 #X connect 30 0 12 0;
-#X connect 31 0 32 0;
-#X connect 31 1 12 0;
-#X connect 32 0 7 0;
 #X restore 45 216 pd gen;
 #X obj 298 88 pdcontrol;
 #X obj 46 248 outlet;
@@ -132,20 +127,18 @@
 #X text 212 271 TODO: set receive~s on unchanged signal count;
 #X text 370 91 arguments of parent patch;
 #X obj 45 88 route set;
-#X obj 45 112 t b a;
 #X text 364 37 arguments: (#out) abs [options];
 #X obj 99 220 bng 15 250 50 0 empty empty reset 17 7 0 10 -261234 -1
 -1;
 #X msg 298 65 args 0;
 #X connect 0 0 10 0;
-#X connect 1 0 14 0;
+#X connect 1 0 13 0;
 #X connect 2 0 4 0;
 #X connect 3 0 2 0;
 #X connect 7 0 6 0;
-#X connect 10 0 11 0;
-#X connect 11 1 2 0;
-#X connect 13 0 2 1;
-#X connect 14 0 3 0;
+#X connect 10 0 2 0;
+#X connect 12 0 2 1;
+#X connect 13 0 3 0;
 #X restore 43 81 pd _source;
 #X connect 0 0 4 1;
 #X connect 2 0 1 0;

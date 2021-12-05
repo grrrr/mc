@@ -107,7 +107,7 @@
 #X obj 50 70 list;
 #X obj 116 70 t b a;
 #X obj 49 47 route bang;
-#X obj 60 408 f;
+#X obj 50 441 f;
 #X msg 382 433 obj 10 \$3 receive~ \$2-dummy;
 #X obj 157 441 + 2;
 #X obj 84 490 pack 0 0 \$0 0 0 0 0;
@@ -145,8 +145,7 @@
 #X text 96 162 filter id 0;
 #X obj 607 218 t b b;
 #X msg 642 536 0;
-#X obj 49 288 t b b b;
-#X msg 35 542 dirty 0;
+#X obj 49 288 t b b;
 #X connect 0 0 42 0;
 #X connect 3 0 12 0;
 #X connect 6 0 36 0;
@@ -214,10 +213,8 @@
 #X connect 55 0 13 0;
 #X connect 55 1 56 0;
 #X connect 56 0 14 0;
-#X connect 57 0 58 0;
-#X connect 57 1 37 0;
-#X connect 57 2 21 0;
-#X connect 58 0 9 0;
+#X connect 57 0 37 0;
+#X connect 57 1 21 0;
 #X restore 45 150 pd gen;
 #X obj 298 88 pdcontrol;
 #X obj 46 223 outlet;
