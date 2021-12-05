@@ -4,7 +4,7 @@
 #X obj 44 68 mc._in;
 #X obj 43 162 mc._out;
 #X obj 44 38 inlet~ fwd;
-#X obj 43 125 mc._index;
+#X obj 43 124 mc._index;
 #X connect 0 0 5 1;
 #X connect 2 0 5 0;
 #X connect 3 0 1 0;
