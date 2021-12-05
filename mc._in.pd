@@ -27,7 +27,8 @@
 #X obj 286 507 s pd-\$0-dyn;
 #X obj 53 504 outlet;
 #X obj 48 177 t f f b;
-#X msg 110 373 obj 50 60 receive \$1-mc-msg \, connect 1 0 0 0;
+#X msg 110 373 obj 50 60 receive \$1-mc-msg \, connect 1 0 0 0 \, dirty
+0;
 #X connect 1 0 4 0;
 #X connect 2 0 7 0;
 #X connect 3 0 2 0;

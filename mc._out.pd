@@ -7,9 +7,6 @@
 #X obj 37 158 array define \$0-out 2;
 #X obj 37 202 tabreceive~ \$0-out;
 #X obj 38 82 t a a;
-#X obj 227 133 unpack;
-#X floatatom 228 160 5 0 0 0 - - -;
-#X floatatom 271 160 5 0 0 0 - - -;
 #N canvas 362 153 255 287 msg 0;
 #X obj 68 34 inlet;
 #X obj 68 69 unpack f f;
@@ -29,33 +26,36 @@
 #X text 47 26 id;
 #X obj 160 320 s pd-\$0-dyn;
 #X obj 51 116 t f b;
-#X msg 51 263 obj 50 60 send \$1-mc-msg \, connect 0 0 1 0;
 #X obj 51 91 change;
-#X connect 1 0 9 0;
+#X msg 51 263 obj 50 60 send \$1-mc-msg \, connect 0 0 1 0 \, dirty
+0;
+#X connect 1 0 8 0;
 #X connect 2 0 6 0;
 #X connect 3 0 2 0;
-#X connect 7 0 8 0;
+#X connect 7 0 9 0;
 #X connect 7 1 2 0;
-#X connect 8 0 6 0;
-#X connect 9 0 7 0;
+#X connect 8 0 7 0;
+#X connect 9 0 6 0;
 #X restore 93 155 pd gen;
 #X obj 146 157 bng 15 250 50 0 empty empty reset 17 7 0 10 -261234
 -1 -1;
 #X text 95 137 in;
 #X text 81 203 channels;
+#X obj 179 32 inlet;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 1 1 2 1;
 #X connect 2 0 4 0;
 #X connect 2 1 5 0;
 #X connect 6 0 5 1;
+#X connect 9 0 6 0;
 #X restore 98 83 pd msg;
+#X obj 149 85 bng 15 250 50 0 empty empty reset 17 7 0 10 -261234 -1
+-1;
 #X connect 1 0 7 0;
 #X connect 2 0 3 0;
 #X connect 3 0 7 0;
 #X connect 6 0 0 0;
 #X connect 7 0 4 0;
 #X connect 7 1 8 0;
-#X connect 7 1 11 0;
-#X connect 8 0 9 0;
-#X connect 8 1 10 0;
+#X connect 9 0 8 1;

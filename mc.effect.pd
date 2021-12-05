@@ -84,11 +84,11 @@
 #X obj 357 445 * 25;
 #X obj 358 470 + 60;
 #X obj 633 484 list prepend obj 200 100;
-#X text 63 394 index;
-#X obj 92 502 pack f \$0 f f;
-#X obj 71 419 t f f f;
-#X obj 117 446 * 25;
-#X obj 118 471 + 60;
+#X text 67 383 index;
+#X obj 96 491 pack f \$0 f f;
+#X obj 75 408 t f f f;
+#X obj 121 435 * 25;
+#X obj 122 460 + 60;
 #N canvas 363 86 585 297 connections 0;
 #X obj 63 26 inlet;
 #X text 109 24 index;
@@ -110,10 +110,10 @@
 #X connect 12 0 5 0;
 #X connect 12 1 5 1;
 #X connect 13 0 2 0;
-#X restore 72 551 pd connections;
-#X msg 92 526 obj 500 \$3 send~ \$2-mc-\$1;
+#X restore 76 540 pd connections;
+#X msg 96 515 obj 500 \$3 send~ \$2-mc-\$1;
 #X msg 346 525 obj 10 \$3 receive~ \$4-mc-\$1;
-#X obj 69 372 mc._cnt;
+#X obj 73 361 mc._cnt;
 #X obj 143 337 f;
 #X obj 627 381 t b b a;
 #X obj 71 287 spigot;
@@ -128,6 +128,8 @@
 #X msg 618 526 connect 0 0 3 0 \, connect 1 0 4 0;
 #X obj 690 238 t b b;
 #X msg 717 565 0;
+#X obj 27 540 t b f;
+#X msg 30 567 dirty 0;
 #X connect 0 0 22 0;
 #X connect 1 0 32 0;
 #X connect 5 0 17 0;
@@ -183,7 +185,7 @@
 #X connect 47 0 48 0;
 #X connect 47 0 42 1;
 #X connect 48 0 45 1;
-#X connect 49 0 16 0;
+#X connect 49 0 56 0;
 #X connect 49 1 44 0;
 #X connect 49 1 45 0;
 #X connect 49 3 38 1;
@@ -192,6 +194,9 @@
 #X connect 54 0 12 0;
 #X connect 54 1 55 0;
 #X connect 55 0 16 0;
+#X connect 56 0 57 0;
+#X connect 56 1 16 0;
+#X connect 57 0 9 0;
 #X restore 45 216 pd gen;
 #X obj 298 88 pdcontrol;
 #X obj 46 248 outlet;

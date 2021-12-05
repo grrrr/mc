@@ -1,42 +1,28 @@
 #N canvas 108 133 787 507 12;
 #X obj 78 242 mc.effect 8 vstplugin~ 8 8;
-#X obj 78 360 route 0 1 2 3 4 5 6 7;
-#X obj 78 383 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+#X obj 78 395 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 0 256;
-#X obj 94 401 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+#X obj 94 413 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 0 256;
-#X obj 114 419 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
-#X obj 130 437 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
-#X obj 149 382 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
-#X obj 165 400 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
-#X obj 185 418 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
-#X obj 201 436 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+#X obj 114 431 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 97.9883 256;
+#X obj 130 449 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 97.9883 256;
 #X obj 78 22 osc~ 100;
 #X obj 148 139 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 0 1;
+-1 -1 9800 1;
 #X msg 145 181 all \$1;
-#X obj 78 305 mc.sink 1 env~;
-#X text 185 305 sink signals into individual env~ objects;
+#X obj 77 343 mc.sink 1 env~;
+#X text 184 343 sink signals into individual env~ objects;
 #X obj 78 204 mc.op *~ 0;
 #X text 158 204 operate [*~ 0] on all channels;
 #X text 145 259 8 outputs;
 #X text 274 238 process input channels through [vstplugin~] to 8 output
 channels;
-#X obj 343 357 mc.unpack~8, f 21;
-#X obj 343 379 mc.snap~;
-#X obj 362 396 mc.snap~;
-#X obj 383 413 mc.snap~;
-#X obj 402 430 mc.snap~;
-#X obj 424 379 mc.snap~;
-#X obj 443 396 mc.snap~;
-#X obj 464 413 mc.snap~;
-#X obj 483 430 mc.snap~;
+#X obj 345 393 mc.snap~;
+#X obj 364 410 mc.snap~;
+#X obj 385 427 mc.snap~;
+#X obj 404 444 mc.snap~;
 #X obj 78 69 mc.dist~ 4;
 #X text 85 50 distribute signal to 4 channels;
 #X obj 421 63 mc.source 4 osc~ 100;
@@ -47,31 +33,31 @@ channels;
 #X text 284 137 <------ RAISE THE VOLUME!;
 #X obj 145 158 dbtorms;
 #X msg 587 380 \; pd dsp 1;
-#X connect 0 0 13 0;
-#X connect 0 0 19 0;
-#X connect 1 0 2 0;
-#X connect 1 1 3 0;
-#X connect 1 2 4 0;
-#X connect 1 3 5 0;
-#X connect 1 4 6 0;
-#X connect 1 5 7 0;
-#X connect 1 6 8 0;
-#X connect 1 7 9 0;
-#X connect 10 0 28 0;
-#X connect 11 0 36 0;
-#X connect 12 0 15 1;
-#X connect 13 0 1 0;
-#X connect 15 0 0 0;
-#X connect 19 0 20 0;
-#X connect 19 1 21 0;
-#X connect 19 2 22 0;
-#X connect 19 3 23 0;
-#X connect 19 4 24 0;
-#X connect 19 5 25 0;
-#X connect 19 6 26 0;
-#X connect 19 7 27 0;
-#X connect 28 0 32 0;
-#X connect 30 0 32 1;
-#X connect 32 0 15 0;
-#X connect 34 0 37 0;
-#X connect 36 0 12 0;
+#X obj 345 371 mc.unpack~4, f 12;
+#X obj 78 372 route 0 1 2 3;
+#X text 184 303 even channels;
+#X text 454 307 odd channels;
+#X obj 77 304 mc.slice 0 8 2;
+#X obj 345 307 mc.slice 1 8 2;
+#X connect 0 0 32 0;
+#X connect 0 0 33 0;
+#X connect 5 0 18 0;
+#X connect 6 0 26 0;
+#X connect 7 0 10 1;
+#X connect 8 0 29 0;
+#X connect 10 0 0 0;
+#X connect 18 0 22 0;
+#X connect 20 0 22 1;
+#X connect 22 0 10 0;
+#X connect 24 0 27 0;
+#X connect 26 0 7 0;
+#X connect 28 0 14 0;
+#X connect 28 1 15 0;
+#X connect 28 2 16 0;
+#X connect 28 3 17 0;
+#X connect 29 0 1 0;
+#X connect 29 1 2 0;
+#X connect 29 2 3 0;
+#X connect 29 3 4 0;
+#X connect 32 0 8 0;
+#X connect 33 0 28 0;
