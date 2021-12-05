@@ -1,32 +1,35 @@
-#N canvas 92 67 331 320 12;
-#X msg 84 139 all \$1;
-#X msg 158 140 0 \$1;
-#X msg 225 140 7 \$1;
-#X obj 84 118 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+#N canvas 92 67 507 422 12;
+#X msg 84 160 all \$1;
+#X msg 158 161 0 \$1;
+#X msg 225 161 7 \$1;
+#X obj 84 139 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262130 -1 -1 4 256;
-#X obj 158 118 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+#X obj 158 139 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262130 -1 -1 0 256;
-#X obj 225 118 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+#X obj 225 139 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262130 -1 -1 0 256;
-#X obj 39 173 mc.op *~ 2;
-#X obj 39 13 mc.sig~;
-#X obj 56 29 mc.sig~;
-#X obj 39 77 mc.pack~8, f 18;
-#X obj 39 239 mc.snap~;
-#X obj 57 255 mc.snap~;
-#X obj 76 271 mc.snap~;
-#X obj 94 287 mc.snap~;
-#X obj 113 239 mc.snap~;
-#X obj 131 255 mc.snap~;
-#X obj 150 271 mc.snap~;
-#X obj 168 287 mc.snap~;
-#X obj 39 218 mc.unpack~8, f 19;
-#X obj 74 45 mc.sig~;
-#X obj 91 61 mc.sig~;
-#X obj 109 13 mc.sig~;
-#X obj 126 29 mc.sig~;
-#X obj 144 45 mc.sig~;
-#X obj 161 61 mc.sig~;
+#X obj 39 194 mc.op *~ 2;
+#X obj 39 34 mc.sig~;
+#X obj 56 50 mc.sig~;
+#X obj 39 98 mc.pack~8, f 18;
+#X obj 38 310 mc.snap~;
+#X obj 56 326 mc.snap~;
+#X obj 75 342 mc.snap~;
+#X obj 93 358 mc.snap~;
+#X obj 112 310 mc.snap~;
+#X obj 130 326 mc.snap~;
+#X obj 149 342 mc.snap~;
+#X obj 167 358 mc.snap~;
+#X obj 38 289 mc.unpack~8, f 19;
+#X obj 74 66 mc.sig~;
+#X obj 91 82 mc.sig~;
+#X obj 109 34 mc.sig~;
+#X obj 126 50 mc.sig~;
+#X obj 144 66 mc.sig~;
+#X obj 161 82 mc.sig~;
+#X text 53 219 NOTE: if the mc signal chain changes and mc.op is dynamically
+(internally) recreated \, parameters input through the right inlet
+are lost.;
 #X connect 0 0 6 1;
 #X connect 1 0 6 1;
 #X connect 2 0 6 1;
