@@ -14,7 +14,6 @@
 #X floatatom 262 217 5 0 0 0 - - -;
 #X obj 39 125 mc.sink 1 env~;
 #X msg 64 97 set 0 throw~ sum;
-#X text 188 95 TODO: fix;
 #X connect 0 0 1 0;
 #X connect 0 1 2 0;
 #X connect 0 2 4 0;
