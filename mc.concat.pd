@@ -1,4 +1,11 @@
-#N canvas 113 114 338 351 12;
+#N canvas 315 204 296 255 12;
+#X obj 52 36 inlet~;
+#X obj 164 34 inlet~;
+#X obj 52 73 mc._in;
+#X obj 164 70 mc._in;
+#X obj 52 172 mc._out;
+#X obj 52 197 outlet~;
+#N canvas 0 23 311 345 _concat 0;
 #N canvas 34 23 1006 739 gen 0;
 #X text 549 260 erase;
 #X text 100 276 index;
@@ -7,13 +14,13 @@
 #X obj 52 695 outlet;
 #X obj 49 23 inlet;
 #X obj 50 195 mc._gen \$0-dyn;
-#X obj 165 167 r \$0-dyn;
+#X obj 551 25 r \$0-dyn;
 #X obj 481 701 s \$0-dyn;
 #X msg 526 282 vis 1 \, editmode 1 \, mouse 0 30 0 0 \, mouseup 10000
 10000 0 \, cut \, editmode 0 \, vis 0;
-#X obj 302 23 inlet;
+#X obj 275 23 inlet;
 #X obj 116 99 +;
-#X text 345 42 right inlet always precedes left inlet;
+#X text 318 42 right inlet always precedes left inlet;
 #X obj 50 151 f;
 #X text 21 170 total channels;
 #X obj 154 355 moses;
@@ -25,18 +32,18 @@
 #X obj 342 407 -;
 #X obj 185 327 t f f;
 #X obj 49 64 unpack f f;
-#X obj 302 64 unpack f f;
+#X obj 275 64 unpack f f;
 #X obj 154 470 pack f \$0 f f f;
 #X obj 184 410 f;
 #X obj 270 408 f;
 #X msg 154 495 obj 10 \$3 receive~ \$4-mc-\$5 \, obj 500 \$3 send~
 \$2-mc-\$1;
 #X text 93 25 symbol mc-id channels;
-#X text 346 25 symbol mc-id channels;
-#X obj 51 656 list prepend \$0;
+#X text 319 25 symbol mc-id channels;
+#X obj 51 667 list prepend \$0;
 #X obj 668 31 inlet;
 #X obj 49 87 t b f;
-#X obj 481 255 t f b;
+#X obj 488 227 t f b;
 #N canvas 0 23 421 295 accum 0;
 #X obj 52 23 inlet;
 #X obj 51 242 outlet;
@@ -71,6 +78,8 @@
 #X obj 95 592 pack 0 0 0;
 #X msg 95 616 connect 1 \$3 \$1 0 \, connect \$1 0 \$2 0;
 #X obj 420 406 + 60;
+#X obj 535 227 t b b;
+#X msg 563 613 0;
 #X connect 2 0 43 0;
 #X connect 5 0 23 0;
 #X connect 6 0 31 0;
@@ -105,11 +114,11 @@
 #X connect 27 0 25 3;
 #X connect 28 0 8 0;
 #X connect 31 0 4 0;
-#X connect 32 0 9 0;
+#X connect 32 0 44 0;
 #X connect 33 0 13 0;
 #X connect 33 1 26 1;
 #X connect 34 0 35 0;
-#X connect 34 1 9 0;
+#X connect 34 1 44 0;
 #X connect 35 0 39 0;
 #X connect 36 0 8 0;
 #X connect 38 0 8 0;
@@ -121,6 +130,9 @@
 #X connect 41 0 42 0;
 #X connect 42 0 8 0;
 #X connect 43 0 25 2;
+#X connect 44 0 9 0;
+#X connect 44 1 45 0;
+#X connect 45 0 31 0;
 #X restore 45 178 pd gen;
 #X obj 171 124 cnv 15 100 60 empty empty dyn 5 12 0 14 -233017 -66577
 0;
@@ -165,3 +177,10 @@
 #X connect 4 0 3 0;
 #X connect 5 0 3 1;
 #X connect 8 0 0 2;
+#X restore 52 123 pd _concat;
+#X connect 0 0 2 0;
+#X connect 1 0 3 0;
+#X connect 2 0 6 0;
+#X connect 3 0 6 1;
+#X connect 4 0 5 0;
+#X connect 6 0 4 0;
