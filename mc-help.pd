@@ -1,48 +1,50 @@
 #N canvas 33 39 787 507 12;
-#X obj 78 254 mc.effect 8 vstplugin~ 8 8;
+#X obj 78 273 mc.effect 8 vstplugin~ 8 8;
 #X obj 78 22 osc~ 100;
 #X obj 148 97 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 10100 1;
+-1 -1 8100 1;
 #X msg 145 139 all \$1;
-#X obj 78 371 mc.sink 1 env~;
-#X text 185 371 sink signals into individual env~ objects;
+#X obj 78 396 mc.sink 1 env~;
+#X text 87 376 sink signals into individual env~ objects;
 #X obj 78 162 mc.op *~ 0;
 #X text 158 162 operate [*~ 0] on all channels;
-#X text 145 271 8 outputs;
-#X text 274 250 process input channels through [vstplugin~] to 8 output
+#X text 145 290 8 outputs;
+#X text 274 269 process input channels through [vstplugin~] to 8 output
 channels;
-#X obj 346 421 mc.snap~;
-#X obj 365 438 mc.snap~;
-#X obj 386 455 mc.snap~;
-#X obj 405 472 mc.snap~;
+#X obj 402 423 mc.snap~;
+#X obj 421 440 mc.snap~;
+#X obj 442 457 mc.snap~;
+#X obj 461 474 mc.snap~;
 #X obj 78 69 mc.dist~ 4;
 #X text 85 50 distribute signal to 4 channels;
 #X text 442 44 alternative: 4 independent sources;
 #X text 250 208 concatenate to 8 channels in total;
-#X obj 588 384 loadbang;
+#X obj 657 420 loadbang;
 #X obj 145 116 dbtorms;
-#X msg 588 408 \; pd dsp 1;
-#X obj 346 399 mc.unpack~4, f 12;
-#X obj 78 400 route 0 1 2 3;
+#X msg 657 444 \; pd dsp 1;
+#X obj 402 401 mc.unpack~4, f 12;
+#X obj 78 425 route 0 1 2 3;
 #X text 185 325 even channels;
-#X text 455 329 odd channels;
+#X text 511 331 odd channels;
 #X obj 78 332 mc.slice 0 8 2;
-#X obj 346 335 mc.slice 1 8 2;
+#X obj 402 337 mc.slice 1 8 2;
 #X text 183 340 (0-based);
-#X text 453 343 (0-based);
-#X obj 81 423 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 9800 1;
-#X obj 81 433 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 9800 1;
-#X obj 81 444 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 5226 1;
-#X obj 81 454 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 4761 1;
+#X text 509 345 (0-based);
+#X obj 81 448 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
+-1 -1 7641 1;
+#X obj 81 458 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
+-1 -1 7641 1;
+#X obj 81 469 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
+-1 -1 3401 1;
+#X obj 81 479 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
+-1 -1 3428 1;
 #X text 538 159 low-pass filter all channels;
 #X obj 78 206 mc.concat, f 23;
 #X obj 447 65 mc.source 4 noise~;
 #X obj 446 157 mc.op lop~ 1;
 #X text 281 95 <-- RAISE THE VOLUME!;
+#X msg 257 247 open MultiEq \, vis 1;
+#X text 403 247 load MultiEq from IEM plugins bundle;
 #X connect 0 0 25 0;
 #X connect 0 0 26 0;
 #X connect 1 0 14 0;
@@ -66,3 +68,4 @@ channels;
 #X connect 34 0 0 0;
 #X connect 35 0 36 0;
 #X connect 36 0 34 1;
+#X connect 38 0 0 1;
