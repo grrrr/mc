@@ -1,0 +1,30 @@
+#N canvas 176 165 278 275 12;
+#X obj 48 228 outlet~;
+#X obj 48 52 mc._in;
+#X obj 48 204 mc._out;
+#X obj 48 24 inlet~;
+#X obj 81 88 unpack f f;
+#X obj 48 170 t a a;
+#X obj 114 204 spigot;
+#X obj 114 228 print mc.mon \$0;
+#X obj 65 120 cnv 15 120 30 empty empty \$0 3 6 0 10 -233017 -66577
+0;
+#X obj 83 133 nbx 4 14 -1e+37 1e+37 0 0 empty empty ID 20 -7 0 10 -261682
+-1 -1 0 256;
+#X obj 128 133 nbx 3 14 -1e+37 1e+37 0 0 empty empty chns 3 -7 0 10
+-261682 -1 -1 0 256;
+#X obj 167 132 tgl 15 0 empty empty mon 0 -7 0 10 -204786 -1 -1 0 1
+;
+#X obj 67 133 bng 14 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 1 0 4 0;
+#X connect 1 0 5 0;
+#X connect 2 0 0 0;
+#X connect 3 0 1 0;
+#X connect 4 0 9 0;
+#X connect 4 1 10 0;
+#X connect 5 0 2 0;
+#X connect 5 1 6 0;
+#X connect 6 0 7 0;
+#X connect 11 0 6 1;
+#X coords 0 -1 1 1 120 30 2 65 120;
