@@ -1,10 +1,10 @@
-#N canvas 69 23 292 257 12;
+#N canvas 69 23 307 245 12;
 #X obj 168 40 inlet;
 #X obj 43 194 outlet~;
 #X obj 43 68 mc._in;
 #X obj 43 162 mc._out;
 #X obj 43 38 inlet~ fwd;
-#N canvas 594 153 616 317 _effect 0;
+#N canvas 110 140 616 317 _effect 0;
 #X obj 44 38 inlet;
 #X obj 298 39 loadbang;
 #N canvas 112 43 1129 686 gen 0;
@@ -225,6 +225,9 @@
 #X connect 13 0 2 2;
 #X connect 15 0 3 0;
 #X restore 43 123 pd _effect;
+#X obj 2 1 cnv 15 300 20 empty empty \$0 3 8 0 12 -233017 -66577 0
+;
+#X text 44 0 (c)grrrr.org \, gpl v3;
 #X connect 0 0 5 1;
 #X connect 2 0 5 0;
 #X connect 3 0 1 0;

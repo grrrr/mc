@@ -1,74 +1,76 @@
-#N canvas 74 50 786 535 12;
-#X obj 78 273 mc.effect 8 vstplugin~ 8 8;
-#X obj 78 22 osc~ 100;
-#X obj 148 97 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -261682
+#N canvas 96 83 806 537 12;
+#X obj 78 295 mc.effect 8 vstplugin~ 8 8;
+#X obj 78 44 osc~ 100;
+#X obj 148 119 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -261682
 -1 -1 0 1;
-#X msg 145 139 all \$1;
-#X obj 78 396 mc.sink 1 env~;
-#X text 87 376 sink signals into individual env~ objects;
-#X obj 78 162 mc.op *~ 0;
-#X text 158 162 operate [*~ 0] on all channels;
-#X text 145 290 8 outputs;
-#X text 274 269 process input channels through [vstplugin~] to 8 output
+#X msg 145 161 all \$1;
+#X text 87 392 sink signals into individual env~ objects;
+#X obj 78 184 mc.op *~ 0;
+#X text 158 184 operate [*~ 0] on all channels;
+#X text 145 312 8 outputs;
+#X text 274 291 process input channels through [vstplugin~] to 8 output
 channels;
-#X obj 402 423 mc.snap~;
-#X obj 421 440 mc.snap~;
-#X obj 442 457 mc.snap~;
-#X obj 461 474 mc.snap~;
-#X text 85 50 distribute signal to 4 channels;
-#X text 442 44 alternative: 4 independent sources;
-#X text 250 208 concatenate to 8 channels in total;
-#X obj 657 420 loadbang;
-#X obj 145 116 dbtorms;
-#X msg 657 444 \; pd dsp 1;
-#X obj 402 401 mc.unpack~4, f 12;
-#X obj 78 425 route 0 1 2 3;
-#X text 185 325 even channels;
-#X text 511 331 odd channels;
-#X obj 78 332 mc.slice 0 8 2;
-#X obj 402 337 mc.slice 1 8 2;
-#X text 183 340 (0-based);
-#X text 509 345 (0-based);
-#X obj 81 448 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
+#X obj 402 445 mc.snap~;
+#X obj 421 462 mc.snap~;
+#X obj 442 479 mc.snap~;
+#X obj 461 496 mc.snap~;
+#X text 85 72 distribute signal to 4 channels;
+#X text 442 66 alternative: 4 independent sources;
+#X text 250 227 concatenate to 8 channels in total;
+#X obj 657 442 loadbang;
+#X obj 145 138 dbtorms;
+#X msg 657 466 \; pd dsp 1;
+#X obj 402 423 mc.unpack~4, f 12;
+#X obj 78 447 route 0 1 2 3;
+#X text 185 347 even channels;
+#X text 511 353 odd channels;
+#X obj 78 354 mc.slice 0 8 2;
+#X obj 402 359 mc.slice 1 8 2;
+#X text 183 362 (0-based);
+#X text 509 367 (0-based);
+#X obj 81 470 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
 -1 -1 0 1;
-#X obj 81 458 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
+#X obj 81 480 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
 -1 -1 0 1;
-#X obj 81 469 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 5157 1;
-#X obj 81 479 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 5451 1;
-#X text 538 159 low-pass filter all channels;
-#X obj 78 206 mc.concat, f 23;
-#X obj 447 65 mc.source 4 noise~;
-#X obj 446 157 mc.op lop~ 1;
-#X text 281 95 <-- RAISE THE VOLUME!;
-#X msg 257 247 open MultiEq \, vis 1;
-#X text 403 247 load MultiEq from IEM plugins bundle;
-#X obj 78 235 mc.mon;
-#X obj 78 69 mc.dist~ 4;
-#X text 28 246 mc.mon;
+#X obj 81 491 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
+-1 -1 4609 1;
+#X obj 81 501 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
+-1 -1 5480 1;
+#X text 538 181 low-pass filter all channels;
+#X obj 78 225 mc.concat, f 23;
+#X obj 446 179 mc.op lop~ 1;
+#X text 281 117 <-- RAISE THE VOLUME!;
+#X msg 257 269 open MultiEq \, vis 1;
+#X text 403 269 load MultiEq from IEM plugins bundle;
+#X obj 78 91 mc.dist~ 4;
+#X obj 2 2 cnv 15 800 20 empty empty empty 3 8 0 12 -233017 -66577
+0;
+#X text 11 3 (c)grrrr.org \, gpl v3;
+#X obj 447 87 mc.source 4 noise~;
+#X obj 78 412 mc.sink 1 env~;
+#X obj 78 256 mc.mon;
+#X connect 0 0 23 0;
 #X connect 0 0 24 0;
-#X connect 0 0 25 0;
-#X connect 1 0 40 0;
-#X connect 2 0 18 0;
-#X connect 3 0 6 1;
-#X connect 4 0 21 0;
-#X connect 6 0 33 0;
-#X connect 17 0 19 0;
-#X connect 18 0 3 0;
-#X connect 20 0 10 0;
-#X connect 20 1 11 0;
-#X connect 20 2 12 0;
-#X connect 20 3 13 0;
-#X connect 21 0 28 0;
-#X connect 21 1 29 0;
-#X connect 21 2 30 0;
-#X connect 21 3 31 0;
-#X connect 24 0 4 0;
-#X connect 25 0 20 0;
-#X connect 33 0 39 0;
-#X connect 34 0 35 0;
-#X connect 35 0 33 1;
-#X connect 37 0 0 1;
-#X connect 39 0 0 0;
-#X connect 40 0 6 0;
+#X connect 1 0 37 0;
+#X connect 2 0 17 0;
+#X connect 3 0 5 1;
+#X connect 5 0 32 0;
+#X connect 16 0 18 0;
+#X connect 17 0 3 0;
+#X connect 19 0 9 0;
+#X connect 19 1 10 0;
+#X connect 19 2 11 0;
+#X connect 19 3 12 0;
+#X connect 20 0 27 0;
+#X connect 20 1 28 0;
+#X connect 20 2 29 0;
+#X connect 20 3 30 0;
+#X connect 23 0 41 0;
+#X connect 24 0 19 0;
+#X connect 32 0 42 0;
+#X connect 33 0 32 1;
+#X connect 35 0 0 1;
+#X connect 37 0 5 0;
+#X connect 40 0 33 0;
+#X connect 41 0 20 0;
+#X connect 42 0 0 0;

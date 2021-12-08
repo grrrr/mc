@@ -1,10 +1,10 @@
-#N canvas 315 204 306 241 12;
-#X obj 53 64 mc._in;
-#X obj 53 154 mc._out;
-#X obj 53 179 outlet~;
-#X obj 53 31 inlet~ fwd;
-#X obj 121 65 route set;
-#X obj 212 35 inlet;
+#N canvas 315 204 307 246 12;
+#X obj 47 85 mc._in;
+#X obj 47 175 mc._out;
+#X obj 47 200 outlet~;
+#X obj 47 52 inlet~ fwd;
+#X obj 115 86 route set;
+#X obj 206 56 inlet;
 #N canvas 0 23 586 279 _slice 0;
 #X obj 44 38 inlet;
 #X obj 298 39 loadbang;
@@ -94,7 +94,10 @@
 #X connect 9 0 8 0;
 #X connect 9 1 8 1;
 #X connect 10 0 2 0;
-#X restore 53 115 pd _slice;
+#X restore 47 136 pd _slice;
+#X obj 2 1 cnv 15 300 20 empty empty \$0 3 8 0 12 -233017 -66577 0
+;
+#X text 44 0 (c)grrrr.org \, gpl v3;
 #X connect 0 0 6 0;
 #X connect 1 0 2 0;
 #X connect 3 0 0 0;

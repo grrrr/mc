@@ -1,11 +1,11 @@
-#N canvas 315 204 296 255 12;
-#X obj 52 36 inlet~;
-#X obj 164 34 inlet~;
-#X obj 52 73 mc._in;
-#X obj 164 70 mc._in;
-#X obj 52 172 mc._out;
-#X obj 52 197 outlet~;
-#N canvas 0 23 311 345 _concat 1;
+#N canvas 78 103 305 221 12;
+#X obj 21 40 inlet~;
+#X obj 133 40 inlet~;
+#X obj 21 65 mc._in;
+#X obj 133 66 mc._in;
+#X obj 21 159 mc._out;
+#X obj 21 184 outlet~;
+#N canvas 0 23 311 345 _concat 0;
 #N canvas 34 23 1006 739 gen 0;
 #X text 549 260 erase;
 #X text 100 276 index;
@@ -177,7 +177,10 @@
 #X connect 4 0 3 0;
 #X connect 5 0 3 1;
 #X connect 8 0 0 2;
-#X restore 52 123 pd _concat;
+#X restore 21 115 pd _concat;
+#X obj 2 1 cnv 15 300 20 empty empty \$0 3 8 0 12 -233017 -66577 0
+;
+#X text 44 0 (c)grrrr.org \, gpl v3;
 #X connect 0 0 2 0;
 #X connect 1 0 3 0;
 #X connect 2 0 6 0;
