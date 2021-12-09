@@ -1,78 +1,80 @@
-#N canvas 97 63 806 537 12;
-#X obj 78 295 mc.effect 8 vstplugin~ 8 8;
-#X obj 78 44 osc~ 100;
-#X obj 148 119 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 8800 1;
-#X msg 145 161 all \$1;
-#X text 87 397 sink signals into individual env~ objects;
-#X text 158 184 operate [*~ 0] on all channels;
-#X text 145 312 8 outputs;
-#X text 274 291 process input channels through [vstplugin~] to 8 output
+#N canvas 63 46 806 599 12;
+#X obj 52 340 mc.effect 8 vstplugin~ 8 8;
+#X obj 52 49 osc~ 100;
+#X obj 122 124 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -261682
+-1 -1 0 1;
+#X msg 119 166 all \$1;
+#X text 61 442 sink signals into individual env~ objects;
+#X text 132 189 operate [*~ 0] on all channels;
+#X text 119 357 8 outputs;
+#X text 248 336 process input channels through [vstplugin~] to 8 output
 channels;
-#X text 85 72 distribute signal to 4 channels;
-#X text 442 66 alternative: 4 independent sources;
-#X text 250 227 concatenate to 8 channels in total;
-#X obj 616 454 loadbang;
-#X obj 145 138 dbtorms;
-#X msg 616 478 \; pd dsp 1;
-#X obj 381 425 mc.unpack~4, f 12;
-#X obj 78 452 route 0 1 2 3;
-#X text 185 352 even channels;
-#X text 491 350 odd channels;
-#X obj 78 359 mc.slice 0 8 2;
-#X obj 382 356 mc.slice 1 8 2;
-#X text 183 367 (0-based);
-#X text 489 364 (0-based);
-#X obj 81 475 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 8500 1;
-#X obj 81 485 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 8500 1;
-#X obj 81 496 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 3876 1;
-#X obj 81 506 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 4239 1;
-#X text 569 179 low-pass filter all channels;
-#X obj 78 225 mc.concat, f 23;
-#X text 281 117 <-- RAISE THE VOLUME!;
-#X msg 257 269 open MultiEq \, vis 1;
-#X text 403 269 load MultiEq from IEM plugins bundle;
+#X text 416 71 alternative: 4 independent sources;
+#X text 224 232 concatenate to 8 channels in total;
+#X obj 590 499 loadbang;
+#X obj 119 143 dbtorms;
+#X msg 590 523 \; pd dsp 1;
+#X obj 355 470 mc.unpack~4, f 12;
+#X obj 52 497 route 0 1 2 3;
+#X text 159 397 even channels;
+#X text 465 395 odd channels;
+#X obj 52 404 mc.slice 0 8 2;
+#X obj 356 401 mc.slice 1 8 2;
+#X text 157 412 (0-based);
+#X text 463 409 (0-based);
+#X obj 55 520 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
+-1 -1 0 1;
+#X obj 55 530 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
+-1 -1 0 1;
+#X obj 55 541 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
+-1 -1 5494 1;
+#X obj 55 551 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
+-1 -1 5946 1;
+#X text 543 184 low-pass filter all channels;
+#X obj 52 230 mc.concat, f 23;
+#X text 255 122 <-- RAISE THE VOLUME!;
+#X msg 231 314 open MultiEq \, vis 1;
+#X text 377 314 load MultiEq from IEM plugins bundle;
 #X obj 2 2 cnv 15 800 20 empty empty empty 3 8 0 12 -233017 -66577
 0;
 #X text 11 3 (c)grrrr.org \, gpl v3;
-#X obj 447 87 mc.source 4 noise~;
-#X obj 78 417 mc.sink 1 env~;
-#X obj 78 256 mc.mon;
-#X text 28 266 mc.mon;
-#X obj 78 91 mc.copy~ 4;
-#X obj 381 447 mc.nbx~;
-#X obj 408 463 mc.nbx~;
-#X obj 435 479 mc.nbx~;
-#X obj 462 495 mc.nbx~;
-#X text 196 161 message to all channel ops;
-#X obj 78 184 mc.op *~ 0;
-#X obj 447 179 mc.op lop~ 1 2 3;
+#X obj 421 92 mc.source 4 noise~;
+#X obj 52 462 mc.sink 1 env~;
+#X obj 52 268 mc.mon;
+#X text 179 264 mc.mon;
+#X obj 52 96 mc.copy~ 4;
+#X obj 355 492 mc.nbx~;
+#X obj 382 508 mc.nbx~;
+#X obj 409 524 mc.nbx~;
+#X obj 436 540 mc.nbx~;
+#X text 170 166 message to all channel ops;
+#X obj 52 189 mc.op *~ 0;
+#X obj 421 184 mc.op lop~ 1 2 3;
+#X text 59 77 copy input signal to 4 channels;
+#X text 179 280 Monitor mc signal connection (with optional debug printouts)
+;
+#X connect 0 0 17 0;
 #X connect 0 0 18 0;
-#X connect 0 0 19 0;
-#X connect 1 0 37 0;
-#X connect 2 0 12 0;
-#X connect 3 0 43 1;
-#X connect 11 0 13 0;
-#X connect 12 0 3 0;
-#X connect 14 0 38 0;
-#X connect 14 1 39 0;
-#X connect 14 2 40 0;
-#X connect 14 3 41 0;
-#X connect 15 0 22 0;
-#X connect 15 1 23 0;
-#X connect 15 2 24 0;
-#X connect 15 3 25 0;
-#X connect 18 0 34 0;
-#X connect 19 0 14 0;
-#X connect 27 0 35 0;
-#X connect 29 0 0 1;
-#X connect 33 0 44 0;
-#X connect 34 0 15 0;
-#X connect 35 0 0 0;
-#X connect 37 0 43 0;
-#X connect 43 0 27 0;
-#X connect 44 0 27 1;
+#X connect 1 0 36 0;
+#X connect 2 0 11 0;
+#X connect 3 0 42 1;
+#X connect 10 0 12 0;
+#X connect 11 0 3 0;
+#X connect 13 0 37 0;
+#X connect 13 1 38 0;
+#X connect 13 2 39 0;
+#X connect 13 3 40 0;
+#X connect 14 0 21 0;
+#X connect 14 1 22 0;
+#X connect 14 2 23 0;
+#X connect 14 3 24 0;
+#X connect 17 0 33 0;
+#X connect 18 0 13 0;
+#X connect 26 0 34 0;
+#X connect 28 0 0 1;
+#X connect 32 0 43 0;
+#X connect 33 0 14 0;
+#X connect 34 0 0 0;
+#X connect 36 0 42 0;
+#X connect 42 0 26 0;
+#X connect 43 0 26 1;
