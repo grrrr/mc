@@ -2,7 +2,7 @@
 #X obj 78 295 mc.effect 8 vstplugin~ 8 8;
 #X obj 78 44 osc~ 100;
 #X obj 148 119 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 9500 1;
+-1 -1 8800 1;
 #X msg 145 161 all \$1;
 #X text 87 397 sink signals into individual env~ objects;
 #X text 158 184 operate [*~ 0] on all channels;
@@ -24,13 +24,13 @@ channels;
 #X text 183 367 (0-based);
 #X text 489 364 (0-based);
 #X obj 81 475 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 9200 1;
+-1 -1 8500 1;
 #X obj 81 485 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 9200 1;
+-1 -1 8500 1;
 #X obj 81 496 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 4849 1;
+-1 -1 3876 1;
 #X obj 81 506 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 5492 1;
+-1 -1 4239 1;
 #X text 569 179 low-pass filter all channels;
 #X obj 78 225 mc.concat, f 23;
 #X text 281 117 <-- RAISE THE VOLUME!;
@@ -43,7 +43,7 @@ channels;
 #X obj 78 417 mc.sink 1 env~;
 #X obj 78 256 mc.mon;
 #X text 28 266 mc.mon;
-#X obj 78 91 mc.dist~ 4;
+#X obj 78 91 mc.copy~ 4;
 #X obj 381 447 mc.nbx~;
 #X obj 408 463 mc.nbx~;
 #X obj 435 479 mc.nbx~;

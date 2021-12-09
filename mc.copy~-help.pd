@@ -1,7 +1,7 @@
 #N canvas 154 292 394 266 12;
 #X obj 40 166 mc.nbx~;
 #X obj 58 182 mc.nbx~;
-#X obj 40 97 mc.dist~ 8;
+#X obj 40 97 mc.copy~ 8;
 #X msg 193 64 set \$1;
 #X msg 195 34 1;
 #X msg 259 34 8;
