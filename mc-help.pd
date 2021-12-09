@@ -2,7 +2,7 @@
 #X obj 52 340 mc.effect 8 vstplugin~ 8 8;
 #X obj 52 49 osc~ 100;
 #X obj 122 124 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 0 1;
+-1 -1 8000 1;
 #X msg 119 166 all \$1;
 #X text 61 442 sink signals into individual env~ objects;
 #X text 132 189 operate [*~ 0] on all channels;
@@ -23,14 +23,14 @@ channels;
 #X text 157 412 (0-based);
 #X text 463 409 (0-based);
 #X obj 55 520 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 0 1;
+-1 -1 7698 1;
 #X obj 55 530 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 0 1;
+-1 -1 7698 1;
 #X obj 55 541 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 5494 1;
+-1 -1 5399 1;
 #X obj 55 551 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 5946 1;
-#X text 543 184 low-pass filter all channels;
+-1 -1 5097 1;
+#X text 513 185 low-pass filter all channels;
 #X obj 52 230 mc.concat, f 23;
 #X text 255 122 <-- RAISE THE VOLUME!;
 #X msg 231 314 open MultiEq \, vis 1;
@@ -49,10 +49,10 @@ channels;
 #X obj 436 540 mc.nbx~;
 #X text 170 166 message to all channel ops;
 #X obj 52 189 mc.op *~ 0;
-#X obj 421 184 mc.op lop~ 1 2 3;
 #X text 59 77 copy input signal to 4 channels;
 #X text 179 280 Monitor mc signal connection (with optional debug printouts)
 ;
+#X obj 421 184 mc.op lop~ 1;
 #X connect 0 0 17 0;
 #X connect 0 0 18 0;
 #X connect 1 0 36 0;
@@ -72,9 +72,9 @@ channels;
 #X connect 18 0 13 0;
 #X connect 26 0 34 0;
 #X connect 28 0 0 1;
-#X connect 32 0 43 0;
+#X connect 32 0 45 0;
 #X connect 33 0 14 0;
 #X connect 34 0 0 0;
 #X connect 36 0 42 0;
 #X connect 42 0 26 0;
-#X connect 43 0 26 1;
+#X connect 45 0 26 1;
