@@ -1,10 +1,13 @@
-#N canvas 104 52 252 221 12;
-#X obj 26 23 inlet~;
-#X obj 83 23 inlet~;
-#X obj 82 84 send~ \$0-mc-1;
-#X obj 28 162 outlet~;
-#X obj 25 54 send~ \$0-mc-0;
-#X obj 28 130 mc._out \$0 2;
+#N canvas 104 52 355 256 12;
+#X obj 33 54 inlet~;
+#X obj 90 54 inlet~;
+#X obj 89 115 send~ \$0-mc-1;
+#X obj 35 193 outlet~;
+#X obj 32 85 send~ \$0-mc-0;
+#X obj 35 161 mc._out \$0 2;
+#X obj 2 1 cnv 15 350 20 empty empty \$0 3 8 0 12 -233017 -66577 0
+;
+#X text 44 0 (c)grrrr.org \, gpl v3;
 #X connect 0 0 4 0;
 #X connect 1 0 2 0;
 #X connect 5 0 3 0;

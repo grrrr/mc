@@ -1,4 +1,4 @@
-#N canvas 127 61 424 372 12;
+#N canvas 127 61 505 372 12;
 #X obj 181 190 s~ \$0-dummy;
 #X obj 44 306 outlet~;
 #X obj 115 309 outlet~;
@@ -8,10 +8,13 @@
 #X obj 66 269 receive~ \$0-dummy;
 #X obj 183 243 receive~ \$0-dummy;
 #X obj 207 271 receive~ \$0-dummy;
-#X obj 42 32 inlet~;
+#X obj 42 52 inlet~;
 #X obj 43 189 route 0 1 2 3;
-#X obj 42 60 mc._in;
+#X obj 42 80 mc._in;
 #X obj 42 155 mc._unpack \$0-dummy 4;
+#X obj 2 1 cnv 15 500 20 empty empty \$0 3 8 0 12 -233017 -66577 0
+;
+#X text 44 0 (c)grrrr.org \, gpl v3;
 #X connect 5 0 1 0;
 #X connect 6 0 2 0;
 #X connect 7 0 3 0;
