@@ -1,16 +1,18 @@
-#N canvas 0 23 304 193 12;
-#X obj 52 24 inlet~;
+#N canvas 0 23 279 223 12;
+#X obj 50 24 inlet~;
 #X obj 172 26 loadbang;
 #X msg 172 49 1;
 #X obj 172 72 metro 50;
-#X obj 52 66 snapshot~;
+#X obj 50 66 snapshot~;
 #X obj 50 130 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262130 -1 -1 16 256;
-#X obj 52 97 change;
+-262130 -1 -1 0 256;
+#X obj 50 88 change;
+#X obj 50 173 outlet~;
 #X connect 0 0 4 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
 #X connect 4 0 6 0;
+#X connect 5 0 7 0;
 #X connect 6 0 5 0;
 #X coords 0 -1 1 1 54 14 2 50 130;
