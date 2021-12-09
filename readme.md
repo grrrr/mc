@@ -5,4 +5,4 @@ mc - Pure data multi-channel extension
 For information on usage and redistribution, and for a DISCLAIMER OF ALL
 WARRANTIES, see the file, "license.txt," in this distribution.
 
-<img width="899" alt="mc-help" src="https://user-images.githubusercontent.com/163366/145060162-8317ea43-8ba2-4179-ae9e-0753ead70bff.png">
+<img width="918" alt="mc-help" src="https://user-images.githubusercontent.com/163366/145493134-900255b3-9dc7-4ea4-a11e-2e0f88bdcea9.png">
