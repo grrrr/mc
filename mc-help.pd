@@ -1,8 +1,8 @@
-#N canvas 63 46 806 599 12;
+#N canvas 29 33 807 580 12;
 #X obj 52 340 mc.effect 8 vstplugin~ 8 8;
 #X obj 52 49 osc~ 100;
 #X obj 122 124 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 8000 1;
+-1 -1 9300 1;
 #X msg 119 166 all \$1;
 #X text 61 442 sink signals into individual env~ objects;
 #X text 132 189 operate [*~ 0] on all channels;
@@ -23,13 +23,13 @@ channels;
 #X text 157 412 (0-based);
 #X text 463 409 (0-based);
 #X obj 55 520 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 7698 1;
+-1 -1 9000 1;
 #X obj 55 530 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 7698 1;
+-1 -1 9000 1;
 #X obj 55 541 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 5399 1;
+-1 -1 4749 1;
 #X obj 55 551 hsl 128 8 0 127 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 5097 1;
+-1 -1 5214 1;
 #X text 513 185 low-pass filter all channels;
 #X obj 52 230 mc.concat, f 23;
 #X text 255 122 <-- RAISE THE VOLUME!;
