@@ -7,8 +7,7 @@ variables:
 
 package_pd_deken:
   rules:
-    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH  
-    - if: $CI_COMMIT_TAG != ''  
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH && $CI_COMMIT_TAG != ''  
   stage: package
   script:
     - mkdir -p build/$CI_PROJECT_NAME
