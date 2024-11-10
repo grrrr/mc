@@ -8,12 +8,12 @@ variables:
 package_pd_deken:
   rules:
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH  
-#    - if: $CI_COMMIT_TAG != ''  
+    - if: $CI_COMMIT_TAG != ''  
   stage: package
   script:
     - mkdir -p build/$CI_PROJECT_NAME
     - cp -r ex readme.md license.txt $CI_PROJECT_DIR/*.pd build/$CI_PROJECT_NAME || true
-    - deken package build/$CI_PROJECT_NAME --version `cat version.txt`
+    - deken package build/$CI_PROJECT_NAME --version $CI_COMMIT_TAG
   artifacts:
     paths:
       - $CI_PROJECT_DIR/$CI_PROJECT_NAME*.dek*
