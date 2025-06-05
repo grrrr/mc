@@ -37,6 +37,10 @@ push_github:
 
 upload_deken:
   stage: deploy
+  image: $CI_REGISTRY/docker/pd_max
+  tags:
+    - docker
+    - default
   script:
     - DEKEN_ROOT=yes deken upload --no-source-error $CI_PROJECT_DIR/$CI_PROJECT_NAME*.dek
 
