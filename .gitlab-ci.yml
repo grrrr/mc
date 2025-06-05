@@ -41,6 +41,8 @@ upload_deken:
   tags:
     - docker
     - default
+  dependencies:
+    - package_pd_deken
   script:
     - DEKEN_ROOT=yes deken upload --no-source-error $CI_PROJECT_DIR/$CI_PROJECT_NAME*.dek
 
@@ -50,5 +52,7 @@ upload_owncloud:
   tags:
     - docker
     - default
+  dependencies:
+    - package_pd_deken
   script:
     - upload "$NC_FILES/$NC_USER/Documents/pdmax_packages/" "$NC_USER" "$NC_PW" "$CI_PROJECT_DIR"/*.zip "$CI_PROJECT_DIR"/*.dek
