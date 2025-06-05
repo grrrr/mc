@@ -15,7 +15,6 @@ package_pd_deken:
     - mkdir -p build/$CI_PROJECT_NAME
     - cp -r ex readme.md license.txt $CI_PROJECT_DIR/*.pd build/$CI_PROJECT_NAME || true
     - DEKEN_ROOT=yes deken package build/$CI_PROJECT_NAME --version $CI_COMMIT_TAG
-    - echo "Package:" $(ls $CI_PROJECT_DIR/$CI_PROJECT_NAME*.dek*)
   artifacts:
     paths:
       - $CI_PROJECT_DIR/$CI_PROJECT_NAME*.dek*
