@@ -7,10 +7,6 @@ variables:
 
 package_pd_deken:
   stage: package
-  only:
-    - tags
-  except:
-    - branches
   tags:
     - docker
     - default
@@ -38,6 +34,10 @@ push_github:
 
 upload_deken:
   stage: deploy
+  only:
+    - tags
+  except:
+    - branches
   image: $CI_REGISTRY/docker/pd_max
   tags:
     - docker
